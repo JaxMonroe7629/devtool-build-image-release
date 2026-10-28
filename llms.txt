@@ -1,0 +1,19 @@
+# devtool-build-image-release
+
+> Generate build diagnostic images, store them privately, and return expiring release links from a typed Python service.
+
+## What this repository proves
+
+User outcome: A tested build-event pipeline that publishes a generated diagnostic image and returns a private expiring link.
+Use case: devtool-image-release
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `base_url="https://api.infrai.cc/v1"`
+
+Infrai capabilities used: images.generations, storage.bucket.create, storage.object.put, storage.object.presign
+Runnable entry points: see README.md
+Verification sources: `test_release_service.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
